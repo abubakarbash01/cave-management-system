@@ -101,7 +101,7 @@ export default function Home() {
               </p>
             </div>
             
-            <form onSubmit={handleLogin} className="space-y-6">
+            <form onSubmit={handleLogin} className="space-y-6" style={{width: "100%"}}>
               <div className="space-y-2">
                 <label htmlFor="role" className="text-sm font-medium text-gray-700">
                   Select Your Role
@@ -113,11 +113,11 @@ export default function Home() {
                   required
                 >
                   <option value="">Choose your access level</option>
-                  {roles.map((role) => (
-                    <option key={role.value} value={role.value}>
-                      {role.label}
-                    </option>
-                  ))}
+                  <option value="luzugh">Luzugh Branch</option>
+                  <option value="nizwa">Nizwa Branch</option>
+                  <option value="birkat">Birkat Mouz Branch</option>
+                  <option value="admin">Master Administrator</option>
+                  <option value="foreman">Foreman</option>
                 </select>
               </div>
 
