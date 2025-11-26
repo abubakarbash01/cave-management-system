@@ -1,1 +1,8 @@
-import {useState} from "react"; export default function Home(){const [r,sR]=useState("");const [p,sP]=useState("");const roles={luzugh:"1234",nizwa:"2345",birkat:"3456",admin:"0987",foreman:"0000"};const c=(e)=>{e.preventDefault();if(roles[r]===p)alert("✅ Login Successful!");else alert("❌ Wrong password");};return <div style={{padding:50,fontFamily:"sans-serif",maxWidth:400,margin:"0 auto"}}><h1>Cave System</h1><form onSubmit={c}><label>Select Role:</label><select onChange={e=>sR(e.target.value)} style={{display:"block",width:"100%",margin:"10px 0",padding:10}} required><option value="">Choose...</option><option value="luzugh">Luzugh Branch</option><option value="nizwa">Nizwa Branch</option><option value="birkat">Birkat Mouz Branch</option><option value="admin">Administrator</option><option value="foreman">Foreman</option></select><label>Password:</label><input type="password" onChange={e=>sP(e.target.value)} placeholder="Enter Password" style={{display:"block",width:"100%",margin:"10px 0",padding:10}} required/><button type="submit" style={{width:"100%",padding:"10px",background:"green",color:"white",border:"none",borderRadius:5,cursor:"pointer"}}>Sign In</button></form><div style={{marginTop:20,fontSize:12,background:"#f0f0f0",padding:10}}><strong>Passwords:</strong><br/>Branches: 1234, 2345, 3456<br/>Admin: 0987<br/>Foreman: 0000</div></div>}
+export default function Home() {
+  return (
+    <div style={{padding: 50}}>
+      <h1>Cave Vegetables System</h1>
+      <p>Login: Admin=0987, Foreman=0000, Branches=1234/2345/3456</p>
+    </div>
+  );
+}
