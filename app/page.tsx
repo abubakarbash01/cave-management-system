@@ -15,7 +15,7 @@ export default function Home() {
     { value: "foreman", label: "Foreman", defaultPassword: "0000" },
   ];
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     
